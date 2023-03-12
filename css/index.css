@@ -14,10 +14,10 @@ body {
 }
 
 .nav-link:hover{
-    color: #0087ca;
+    color: rgba(68, 97, 242, 1);
 }
 
-.nav-item:after {
+.nav-item[target="nav-item"]:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -25,12 +25,12 @@ body {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0087ca;
+    background-color: rgba(68, 97, 242, 1);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 
-.nav-item:hover:after {
+.nav-item[target="nav-item"]:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
     
@@ -39,7 +39,7 @@ body {
 #login_button {
     width: fit-content;
     height: fit-content;
-    background: rgba(22, 120, 242, 1);
+    background: linear-gradient(109.6deg, rgb(78, 62, 255) 11.2%, rgb(164, 69, 255) 91.1%);
     opacity: 1;
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
