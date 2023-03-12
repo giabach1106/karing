@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link href="../css/index.css" rel="stylesheet">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/88d90300b2.js" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
+    
 
 </head>
 
@@ -48,97 +51,117 @@
         </div>
     </nav>
     <!--Section-->
-    <div class="row justify-content-center align-items-center g-2 mt-5" id="row_container">
-        <div class="col-sm-4">
-            <!-- filter -->
-            <div class="container" target="find_patient">
-                <h4 class="text-center" style="padding-top: 4%;">BỘ LỌC TÌM KIẾM</h4>
-                <form>
-                    <div class="mb-3 row">
-                        <label for="inputName" class="col-4 col-form-label">Dia chi</label>
-                        <div class="col-8 pt-2">
-                            <input type="text" class="form-control" id="inputName">
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center g-2 mt-5" id="row_container">
+            <div class="col-sm-4">
+                <!-- filter -->
+                <div class="container" target="find_patient">
+                    <h4 class="text-center" style="padding-top: 4%;">BỘ LỌC TÌM KIẾM</h4>
+                    <form>
+                        <div class="mb-3 row">
+                            <label for="inputName" class="col-4 col-form-label">Dia chi</label>
+                            <div class="col-8 pt-2">
+                                <input type="text" class="form-control" id="inputName">
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="hourly_salary" class="form-label">Mức lương trả(giờ)</label>
-                        <div class="col-sm-6">
-                            <p4>Từ</p4>
-                            <input type="text" class="form-control" name="hourly_salary" id="hourly_salary">
+                        <div class="mb-3 row">
+                            <label for="hourly_salary" class="form-label">Mức lương trả(giờ)</label>
+                            <div class="col-sm-6">
+                                <p4>Từ</p4>
+                                <input type="text" class="form-control" name="hourly_salary" id="hourly_salary">
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-6">
-                            <p4>Đến</p4>
-                            <input type="text" class="form-control" name="hourly_salary" id="hourly_salary">
+                        <div class="mb-3 row">
+                            <div class="col-sm-6">
+                                <p4>Đến</p4>
+                                <input type="text" class="form-control" name="hourly_salary" id="hourly_salary">
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-6">
-                            <label for="from_age" class="form-label">Độ tuổi từ</label>
-                            <input type="text" class="form-control" id="from_age">
-                            <label for="to_age" class="form-label">Đến</label>
-                            <input type="text" class="form-control" id="to_age">
+                        <div class="mb-3 row">
+                            <div class="col-sm-6">
+                                <label for="from_age" class="form-label">Độ tuổi từ</label>
+                                <input type="text" class="form-control" id="from_age">
+                                <label for="to_age" class="form-label">Đến</label>
+                                <input type="text" class="form-control" id="to_age">
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="from_required_age" class="form-label">Độ tuổi yêu cầu từ</label>
+                                <input type="text" class="form-control" id="from_required_age">
+                                <label for="to_required_age" class="form-label">Đến</label>
+                                <input type="text" class="form-control" id="to_required_age">
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <label for="from_required_age" class="form-label">Độ tuổi yêu cầu từ</label>
-                            <input type="text" class="form-control" id="from_required_age">
-                            <label for="to_required_age" class="form-label">Đến</label>
-                            <input type="text" class="form-control" id="to_required_age">
+                        <div class="mb-3 row">
+                            <div class="col-sm-6">
+                                <label for="sex" class="form-label">Giới tính</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <select id="sex" name="sex">
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-6">
-                            <label for="sex" class="form-label">Giới tính</label>
+                        <div class="mb-3 row">
+                            <div class="col-sm-6">
+                                <label for="sex" class="form-label">Giới tính yêu cầu</label>
+                            </div>
+                            <div class="col-sm-6">
+                                <select id="sex" name="sex">
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <select id="sex" name="sex">
-                                <option value="Nam">Nam</option>
-                                <option value="Nữ">Nữ</option>
-                                <option value="Khác">Khác</option>
-                            </select>
+                        <div class="mb-3 row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8"><button type="button" class="btn btn-lg mx-auto rounded-pill"
+                                    onclick="NameFunction()">Submit</button></div>
+                            <div class="col-sm-2"></div>
                         </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-6">
-                            <label for="sex" class="form-label">Giới tính yêu cầu</label>
-                        </div>
-                        <div class="col-sm-6">
-                            <select id="sex" name="sex">
-                                <option value="Nam">Nam</option>
-                                <option value="Nữ">Nữ</option>
-                                <option value="Khác">Khác</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-8"><button type="button" class="btn btn-lg mx-auto rounded-pill" onclick="NameFunction()">Submit</button></div>
-                        <div class="col-sm-2"></div>
-                    </div> 
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
-        <!-- patients' information -->
-        <div class="col-sm-8">
-            <div class="container">
-                <div class="card">
-                    <div class="row no-gutters">
-                        <div class="col-sm-3">
-                            <!-- <img class="card-img rounded-circle" src="/image/patient1.jpg" alt="shiina"> -->
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="card-body">
-                                <h5 class="card-title">Suresh Dasari</h5>
-                                <p class="card-text">Suresh Dasari is a founder and technical lead developer in tutlane.</p>
-                                <a href="#" class="btn btn-primary">View Profile</a>
+            <!-- patients' information -->
+            <div class="col-sm-8">
+                <div class="container pt-0" target="find_information">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-3">
+                                <img class="card-img" src="/image/patient1.jpg" style="height: inherit;" alt="shiina">
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bà Trần Xuân Phương</h5>
+                                    <div class="row">
+                                        <div class="col-sm-6"><i class="fas fa-map-marker-alt"> Giảng Võ, Hà Nội</i></div>
+                                        <div class="col-sm-6"><i class="fa fa-phone"> xxxxxxx</i></div>
+                                    </div>
+                                    <div class="row">
+                                        <div clas="col-4">
+                                            <p2><strong>Tuổi:</strong> 68</p2>
+                                        </div>
+                                        <div clas="col-4">
+                                            <p2><strong>Giới tính: </strong>Nữ</p2>
+                                        </div>
+                                        <div clas="col-4">
+                                            <p2><strong>Mức lương trả: </strong>Từ 250k/giờ</p2>
+                                        </div>
+                                    </div>
+                                    <p2><strong>Yếu cầu: </strong>Người có chuyên môn chăm sóc đặc biệt, kỹ năng châm cứu, sơ
+                                        cứu.
+                                        <strong>Độ tuổi: </strong>35-55
+                                    </p2>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        
         </div>
-
     </div>
 
 </body>
