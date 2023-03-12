@@ -51,16 +51,13 @@
     <div class="row justify-content-center align-items-center g-2 mt-5" id="row_container">
         <div class="col-sm-4">
             <!-- filter -->
-            <div class="container">
-                <h4 class="text-center">Bộ lọc tìm kiếm</h4>
+            <div class="container" target="find_patient">
+                <h4 class="text-center" style="padding-top: 4%;">BỘ LỌC TÌM KIẾM</h4>
                 <form>
                     <div class="mb-3 row">
-                        <label for="inputName" class="col-4 col-form-label">Name</label>
+                        <label for="inputName" class="col-4 col-form-label">Dia chi</label>
                         <div class="col-8 pt-2">
-                            <select id="patients" name="patients">
-                                <option value="Giang Vo">Giảng Võ Hà Nội</option>
-                                <option value="Nam Tu Liem">Nam Từ Liêm, Hà Nội</option>
-                            </select>
+                            <input type="text" class="form-control" id="inputName">
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -114,12 +111,32 @@
                             </select>
                         </div>
                     </div>
+                    <div class="mb-3 row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8"><button type="button" class="btn btn-lg mx-auto rounded-pill" onclick="NameFunction()">Submit</button></div>
+                        <div class="col-sm-2"></div>
+                    </div> 
                 </form>
             </div>
         </div>
         <!-- patients' information -->
         <div class="col-sm-8">
-
+            <div class="container">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-sm-3">
+                            <!-- <img class="card-img rounded-circle" src="/image/patient1.jpg" alt="shiina"> -->
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Suresh Dasari</h5>
+                                <p class="card-text">Suresh Dasari is a founder and technical lead developer in tutlane.</p>
+                                <a href="#" class="btn btn-primary">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
