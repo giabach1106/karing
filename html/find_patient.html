@@ -9,10 +9,21 @@
     <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link href="../css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+        integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/88d90300b2.js" crossorigin="anonymous"></script>
-    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
     
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+        <link rel="stylesheet" href=
+"https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+         integrity=
+"sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5"
+         crossorigin="anonymous">
+    <script src="/js/index.js"></script>
+
 
 </head>
 
@@ -51,10 +62,10 @@
         </div>
     </nav>
     <!--Section-->
-    <div class="container-lg">
-        <div class="row justify-content-center align-items-center g-2 mt-5" id="row_container">
+    <div class="container py-2 mt-5 me-2">
+        <div class="row justify-content-center align-items-center g-2" data-masonry='{"percentPosition": true }'
+            id="row_container">
             <div class="col-sm-4">
-                <!-- filter -->
                 <div class="container" target="find_patient">
                     <h4 class="text-center" style="padding-top: 4%;">BỘ LỌC TÌM KIẾM</h4>
                     <form>
@@ -124,44 +135,113 @@
                     </form>
                 </div>
             </div>
-            <!-- patients' information -->
-            <div class="col-sm-8">
-                <div class="container pt-0" target="find_information">
+            <!-- Patient information -->
+            <div class="col-sm-6 pe-3" id="patientBox">
+                
+                <div class="container">
                     <div class="card">
                         <div class="row no-gutters">
                             <div class="col-sm-3">
-                                <img class="card-img" src="/image/patient1.jpg" style="height: inherit;" alt="shiina">
+                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
                             </div>
                             <div class="col-sm-9">
                                 <div class="card-body">
-                                    <h5 class="card-title">Bà Trần Xuân Phương</h5>
+                                    <h5>Shiina Mahiru</h5>
                                     <div class="row">
-                                        <div class="col-sm-6"><i class="fas fa-map-marker-alt"> Giảng Võ, Hà Nội</i></div>
-                                        <div class="col-sm-6"><i class="fa fa-phone"> xxxxxxx</i></div>
+                                        <div class="col-6">
+                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-phone">xxxxxxxx</i>
+                                        </div>
                                     </div>
                                     <div class="row">
-                                        <div clas="col-4">
-                                            <p2><strong>Tuổi:</strong> 68</p2>
+                                        <div class="col-6">
+                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
                                         </div>
-                                        <div clas="col-4">
+                                        <div class="col-6">
                                             <p2><strong>Giới tính: </strong>Nữ</p2>
                                         </div>
-                                        <div clas="col-4">
-                                            <p2><strong>Mức lương trả: </strong>Từ 250k/giờ</p2>
-                                        </div>
+                                    
                                     </div>
-                                    <p2><strong>Yếu cầu: </strong>Người có chuyên môn chăm sóc đặc biệt, kỹ năng châm cứu, sơ
-                                        cứu.
-                                        <strong>Độ tuổi: </strong>35-55
-                                    </p2>
+                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        
+                <div class="container">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-3">
+                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="card-body">
+                                    <h5>Shiina Mahiru</h5>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-phone">xxxxxxxx</i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
+                                        </div>
+                                        <div class="col-6">
+                                            <p2><strong>Giới tính: </strong>Nữ</p2>
+                                        </div>
+                                    
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-3">
+                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="card-body">
+                                    <h5>Shiina Mahiru</h5>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-phone">xxxxxxxx</i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
+                                        </div>
+                                        <div class="col-6">
+                                            <p2><strong>Giới tính: </strong>Nữ</p2>
+                                        </div>
+                                    
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+
+
         </div>
+    </div>
     </div>
 
 </body>

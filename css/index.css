@@ -3,8 +3,8 @@ body {
 }
 
 nav {
-    background-color: rgb(22, 20, 20);
-    position: sticky;
+    opacity: 1;
+    background-color: #000000;
 }
 
 .navbar-nav>li {
@@ -12,13 +12,15 @@ nav {
     padding-right: 20px;
 }
 
+
+
 .nav-item {
     display: inline-block;
     position: relative;
 }
 
 .nav-link {
-    color: white;
+    color: #ffff;
     font-family: Open Sans;
     font-weight: Regular;
     font-size: 20px;
@@ -70,8 +72,7 @@ nav {
 }
 
 #row_container {
-    margin-left: 0.6%;
-    color: #4461F2;
+    color: #000000;
     font-family: Inter;
     font-weight: Bold;
 }
@@ -97,10 +98,18 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-#row_container .card img {}
 
 #row_container p2,
 h5,
 i {
     color: black;
 }
+
+#patientBox {
+    
+}
+
+#patientBox .container {
+    margin-left: 10%;
+}
+
