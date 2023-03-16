@@ -39,28 +39,92 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item" target="nav-item">
-                        <a class="nav-link" href="#" aria-current="page">Trang chu</a><span
+                        <a class="nav-link" href="/html/index.html" aria-current="page">Trang chu</a><span
                             class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item" target="nav-item">
-                        <a class="nav-link" href="#">Tim benh nhan</a>
+                        <a class="nav-link" href="/html/find_patient.html">Tim benh nhan</a>
                     </li>
                     <li class="nav-item" target="nav-item">
-                        <a class="nav-link" href="#">Lien he</a>
+                        <a class="nav-link" href="/html/find_nurse.html">Tim nguoi cham soc</a>
                     </li>
                     <li class="nav-item" target="nav-item">
-                        <a class="nav-link" href="#">Tim nguoi cham soc</a>
+                        <a class="nav-link" href="/html/contact.html" data-bs-toggle="modal" data-bs-target="#modalId2">Lien he</a>
                     </li>
                     <li class="nav-item" target="nav-item">
-                        <a class="nav-link" href="#">Tu van</a>
+                        <a class="nav-link" href="/html/contact.html" data-bs-toggle="modal" data-bs-target="#modalId2">Tu van</a>
                     </li>
                     <li class="nav-item" id="login_button">
-                        <a class="nav-link" href="#" id="login">Dang nhap</a>
+                        <button class="nav-link btn" href="#" id="login" data-bs-toggle="modal" data-bs-target="#modalId">Dang nhap</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Modal Login -->
+    <!-- Modal trigger button -->
+    
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Login</h4>
+                        <div class="d-flex flex-column text-center">
+                            <form>
+                                <div class="form-group">
+                                    <input type="emait" class="form-control" id="email" placeholder="Your email address">
+
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password" placeholder="Your password">
+                                    <button type="button" class="btn btn-secondary btn-round">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal contact -->
+    <!-- Modal trigger button -->
+    
+    
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId2" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Lien he</h5>
+                    <i class="fa-sharp fa-solid fa-envelope"><p2>Chamsocnguoibenh@gmail</p2></i>
+                    <br>
+                    <i class="fa fa-phone">xxxxxxxx</i>
+                    <br>
+                    <i class="fas fa-map-marker-alt">165 Son Tay, Dong Da, Ha Noi</i>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+  
+    
     <!--Section-->
     <div class="container py-2 mt-5 me-2">
         <div class="row justify-content-center align-items-center g-2" data-masonry='{"percentPosition": true }'
@@ -136,13 +200,109 @@
                 </div>
             </div>
             <!-- Patient information -->
-            <div class="col-sm-6 pe-3 h-100 overflow-y-scroll overflow-x-hidden" id="patientBox">
+            <div class="col-sm-6 pe-2 h-100 overflow-y-scroll overflow-x-hidden" id="patientBox">
                 
                 <div class="container">
                     <div class="card">
                         <div class="row no-gutters">
                             <div class="col-sm-3">
-                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
+                                <!-- <img class="card-img" src="/image/patient1.jpg" alt="shiina"> -->
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="card-body">
+                                    <h5>Shiina Mahiru</h5>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-phone">xxxxxxxx</i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
+                                        </div>
+                                        <div class="col-6">
+                                            <p2><strong>Giới tính: </strong>Nữ</p2>
+                                        </div>
+                                    
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-3">
+                                <!-- <img class="card-img" src="/image/patient1.jpg" alt="shiina"> -->
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="card-body">
+                                    <h5>Shiina Mahiru</h5>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-phone">xxxxxxxx</i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
+                                        </div>
+                                        <div class="col-6">
+                                            <p2><strong>Giới tính: </strong>Nữ</p2>
+                                        </div>
+                                    
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-3">
+                                <!-- <img class="card-img" src="/image/patient1.jpg" alt="shiina"> -->
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="card-body">
+                                    <h5>Shiina Mahiru</h5>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-phone">xxxxxxxx</i>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
+                                        </div>
+                                        <div class="col-6">
+                                            <p2><strong>Giới tính: </strong>Nữ</p2>
+                                        </div>
+                                    
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-sm-3">
+                                <!-- <img class="card-img" src="/image/patient1.jpg" alt="shiina"> -->
                             </div>
                             <div class="col-sm-9">
                                 <div class="card-body">
@@ -238,7 +398,7 @@
                     <div class="card">
                         <div class="row no-gutters">
                             <div class="col-sm-3">
-                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
+                                <!-- <img class="card-img" src="/image/patient1.jpg" alt="shiina"> -->
                             </div>
                             <div class="col-sm-9">
                                 <div class="card-body">
@@ -270,103 +430,7 @@
                     <div class="card">
                         <div class="row no-gutters">
                             <div class="col-sm-3">
-                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="card-body">
-                                    <h5>Shiina Mahiru</h5>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
-                                        </div>
-                                        <div class="col-6">
-                                            <i class="fa fa-phone">xxxxxxxx</i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
-                                        </div>
-                                        <div class="col-6">
-                                            <p2><strong>Giới tính: </strong>Nữ</p2>
-                                        </div>
-                                    
-                                    </div>
-                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="card">
-                        <div class="row no-gutters">
-                            <div class="col-sm-3">
-                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="card-body">
-                                    <h5>Shiina Mahiru</h5>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
-                                        </div>
-                                        <div class="col-6">
-                                            <i class="fa fa-phone">xxxxxxxx</i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
-                                        </div>
-                                        <div class="col-6">
-                                            <p2><strong>Giới tính: </strong>Nữ</p2>
-                                        </div>
-                                    
-                                    </div>
-                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="card">
-                        <div class="row no-gutters">
-                            <div class="col-sm-3">
-                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="card-body">
-                                    <h5>Shiina Mahiru</h5>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <i class="fas fa-map-marker-alt">Giảng Võ, Hà Nội</i>
-                                        </div>
-                                        <div class="col-6">
-                                            <i class="fa fa-phone">xxxxxxxx</i>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <p2 class="card-text"><strong>Tuổi: </strong>68</p2>
-                                        </div>
-                                        <div class="col-6">
-                                            <p2><strong>Giới tính: </strong>Nữ</p2>
-                                        </div>
-                                    
-                                    </div>
-                                    <a href="#" class="btn btn-primary mt-2">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="card">
-                        <div class="row no-gutters">
-                            <div class="col-sm-3">
-                                <img class="card-img" src="/image/patient1.jpg" alt="shiina">
+                                <!-- <img class="card-img" src="/image/patient1.jpg" alt="shiina"> -->
                             </div>
                             <div class="col-sm-9">
                                 <div class="card-body">
