@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karing</title>
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="../css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+        integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/88d90300b2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+        integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <script src="/js/index.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item" target="nav-item">
+                        <a class="nav-link" href="/html/index.html" aria-current="page">Trang chu</a><span
+                            class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item" target="nav-item">
+                        <a class="nav-link" href="/html/find_patient.html">Tim benh nhan</a>
+                    </li>
+                    <li class="nav-item" target="nav-item">
+                        <a class="nav-link" href="/html/find_nurse.html">Tim nguoi cham soc</a>
+                    </li>
+                    <li class="nav-item" target="nav-item">
+                        <a class="nav-link" href="/html/contact.html" data-bs-toggle="modal"
+                            data-bs-target="#modalId2">Lien he</a>
+                    </li>
+                    <li class="nav-item" target="nav-item">
+                        <a class="nav-link" href="/html/contact.html" data-bs-toggle="modal"
+                            data-bs-target="#modalId2">Tu van</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/news.html">Tin tuc</a>
+                    </li>
+                    <li class="nav-item" id="login_button">
+                        <button class="nav-link btn" href="#" id="login" data-bs-toggle="modal"
+                            data-bs-target="#modalId">Dang nhap</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Login -->
+    <!-- Modal trigger button -->
+
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Login</h4>
+                        <div class="d-flex flex-column text-center">
+                            <form>
+                                <div class="form-group">
+                                    <input type="emait" class="form-control" id="email"
+                                        placeholder="Your email address">
+
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Your password">
+                                    <button type="button" class="btn btn-secondary btn-round">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal contact -->
+    <!-- Modal trigger button -->
+
+
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId2" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Lien he</h5>
+                    <i class="fa-solid fa-envelope"></i>
+                        <p2> Chamsocnguoibenh@gmail</p2>
+                    <br>
+                    <i class="fa fa-phone"> xxxxxxxx</i>
+                    <br>
+                    <i class="fas fa-map-marker-alt"> 165 Son Tay, Dong Da, Ha Noi</i>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Section-->
+    <div class="container py-2 mt-5 me-0">
+        <div class="row g-2 d-flex">
+            <div class="col-1 text-end align-content-end">
+
+            </div>
+            <div class="col-9">
+                <div class="input-group mb-3">
+                    <button type="button" class="btn btn-primary text-white"> Search
+                    </button>
+                    <input type="text" class="form-control" placeholder="Nhap tim kiem">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Article -->
+    <article class="container py-2 mt-5 me-0">
+        <div class="card mb-3" style="max-width: 1200px;" onclick="window.location='/html/article.html'">
+            <div class="row g-0">
+              <div class="col-md-2">
+                <img src="/image/article3.png" class="img-fluid rounded-start" alt="Card title">
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, ducimus omnis! Distinctio ex laboriosam nulla! Molestias laboriosam facilis voluptatibus dicta accusantium nobis, sit a fugiat blanditiis iure possimus alias aliquam.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="card mb-3" style="max-width: 1200px;">
+            <div class="row g-0">
+              <div class="col-md-2">
+                <img src="/image/article3.png" class="img-fluid rounded-start" alt="Card title">
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, ducimus omnis! Distinctio ex laboriosam nulla! Molestias laboriosam facilis voluptatibus dicta accusantium nobis, sit a fugiat blanditiis iure possimus alias aliquam.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="card mb-3" style="max-width: 1200px;">
+            <div class="row g-0">
+              <div class="col-md-2">
+                <img src="/image/article3.png" class="img-fluid rounded-start" alt="Card title">
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, ducimus omnis! Distinctio ex laboriosam nulla! Molestias laboriosam facilis voluptatibus dicta accusantium nobis, sit a fugiat blanditiis iure possimus alias aliquam.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="card mb-3" style="max-width: 1200px;">
+            <div class="row g-0">
+              <div class="col-md-2">
+                <img src="/image/article3.png" class="img-fluid rounded-start" alt="Card title">
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, ducimus omnis! Distinctio ex laboriosam nulla! Molestias laboriosam facilis voluptatibus dicta accusantium nobis, sit a fugiat blanditiis iure possimus alias aliquam.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </article>
+</body>
+
+</html>
